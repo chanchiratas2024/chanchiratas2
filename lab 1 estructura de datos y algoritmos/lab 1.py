@@ -1,16 +1,8 @@
-"""
-Time Complexity Analysis
-
-Note: Before running this script, install matplotlib with:
-    pip install matplotlib
-"""
-
 import time
 import matplotlib.pyplot as plt
 
 
 def measure_time(func, n):
-    """Measures execution time of a function"""
     start_time = time.time()
     func(n)
     end_time = time.time()
@@ -18,7 +10,6 @@ def measure_time(func, n):
 
 
 def plot_times(n_values, times, title):
-    """Plots execution times"""
     plt.plot(n_values, times, 'o-')
     plt.title(title)
     plt.xlabel('Input Size (n)')
@@ -28,7 +19,6 @@ def plot_times(n_values, times, title):
 
 
 def run_algorithm(algorithm_func, n_values, title):
-    """Runs algorithm and measures execution time for different n values"""
     times = []
 
     for n in n_values:
@@ -41,7 +31,6 @@ def run_algorithm(algorithm_func, n_values, title):
 
 # 1. Logarithmic complexity - O(log n)
 def logarithmic_algorithm(n):
-    """Algorithm with O(log n) complexity"""
     i = n
     while i > 0:
         i = i // 2
@@ -56,7 +45,6 @@ def simple_loop(n):
 
 # 3. If-then-else statements - O(n)
 def if_then_else(n):
-    """Algorithm with conditional O(n) complexity"""
     if n % 2 == 0:
         for _ in range(n):
             pass
@@ -67,7 +55,6 @@ def if_then_else(n):
 
 # 4. Nested Loops - O(n²)
 def nested_loops(n):
-    """Algorithm with O(n²) complexity"""
     for _ in range(n):
         for _ in range(n):
             pass
@@ -75,7 +62,6 @@ def nested_loops(n):
 
 # 5. Consecutive statements - O(n + n²) = O(n²)
 def consecutive_statements(n):
-    """Algorithm with O(n + n²) complexity"""
     for _ in range(n):
         pass
 
@@ -86,7 +72,6 @@ def consecutive_statements(n):
 
 # Mystery Algorithms
 def mystery_algorithm_1(n):
-    """Mystery algorithm 1"""
     found = False
     for i in range(n):
         for j in range(n):
@@ -99,7 +84,6 @@ def mystery_algorithm_1(n):
 
 
 def mystery_algorithm_2(n):
-    """Mystery algorithm 2"""
     count = 0
     for _ in range(n):
         for _ in range(n):
@@ -109,7 +93,6 @@ def mystery_algorithm_2(n):
 
 
 def mystery_algorithm_3(n):
-    """Mystery algorithm 3"""
     count = 0
     for _ in range(n):
         j = 1
@@ -121,7 +104,6 @@ def mystery_algorithm_3(n):
 
 # Main execution
 if __name__ == "__main__":
-    # Definition of n values for each algorithm
     log_n_values = [1, 10, 100, 1000, 10000, 100000, 1000000]
     linear_n_values = [10**2, 10**3, 10**4, 10**5, 10**6]
     if_else_n_values = [1, 10, 100, 1000, 10000, 100000]
