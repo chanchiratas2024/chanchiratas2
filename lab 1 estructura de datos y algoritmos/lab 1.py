@@ -30,6 +30,8 @@ def run_algorithm(algorithm_func, n_values, title):
 
 
 # 1. Logarithmic complexity - O(log n)
+Prompt ingresado:
+    
 def logarithmic_algorithm(n):
     i = n
     while i > 0:
@@ -69,37 +71,6 @@ def consecutive_statements(n):
         for _ in range(n):
             pass
 
-
-# Mystery Algorithms
-def mystery_algorithm_1(n):
-    found = False
-    for i in range(n):
-        for j in range(n):
-            if j == i:
-                found = True
-                break
-        if found:
-            break
-    return found
-
-
-def mystery_algorithm_2(n):
-    count = 0
-    for _ in range(n):
-        for _ in range(n):
-            for _ in range(n):
-                count += 1
-    return count
-
-
-def mystery_algorithm_3(n):
-    count = 0
-    for _ in range(n):
-        j = 1
-        while j < n:
-            count += 1
-            j *= 2
-    return count
 
 
 # Main execution
